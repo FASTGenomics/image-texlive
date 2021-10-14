@@ -8,6 +8,7 @@ RUN apt update && \
     equivs \
     perl-tk \
     perl-doc \
+    locales \
     wget && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 

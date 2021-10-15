@@ -10,7 +10,10 @@ RUN apt update && \
     perl-doc \
     locales \
     wget && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    locale-gen en_US.UTF-8 && \
+    locale-gen de_DE.utf8 && \
+    update-locale LANG=en_US.UTF-8
 
 COPY texlive.profile /tmp/
 
@@ -19,6 +22,5 @@ RUN cd /tmp/ && \
     perl install-tl --profile texlive.profile && \
     tlmgr install newtx && \
     rm -rf /tmp/*
-
 
 CMD ["bash"]

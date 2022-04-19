@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:impish
 
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive \

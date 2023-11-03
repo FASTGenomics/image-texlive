@@ -5,6 +5,7 @@ RUN apt update && \
     apt install -y --no-install-recommends \
     tex-common \
     texinfo \
+    dvipost \
     equivs \
     perl-tk \
     perl-doc \
